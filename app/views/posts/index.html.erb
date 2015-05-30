@@ -1,23 +1,13 @@
 <h1>Example app</h1>
 
- 
-<% @posts.each do |p| %>
-	<ul style="list-style:none;">
-		<li><strong>Title: <%= p.title %></strong></li>
-		<li>Content <%= p.content %></li>
-		<li>Content <%= p.created_at %></li>
-	</ul>	
+<div id='posts'>
+	<%= render @posts %>
+</div> 
+
+
+<%= link_to new_post_path, remote: true do %>
+  <button>new</button>
 <% end %>
 
-<%= form_for @post do |f| %>
-<ul style="list-style:none;">
-  <li><%= label(:title, :title) %></li>
-  <li><%= f.text_field :title %></li>
-  <li><%= label(:content, :content) %></li>
-  <li><%= f.text_field :content %></li>	
-  <li>  <%= f.submit :create %></li>
-</ul>
-  
-<% end %> 
-
+<div id='post-form' style='display:none;'></div>
 

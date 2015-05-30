@@ -1,0 +1,14 @@
+<h4>Add a comment</h4>
+<ul>
+	<%= form_for @post, remote: true do |f| %>
+	<li><%= label :title, :title %></li>
+	<li><%= f.text_field :title %></li>
+	<li><%= label :content, :content %></li>
+	<li><%= f.text_field :content %></li>
+	<li><%= f.button :submit %></li>
+	<% end %>
+</ul>
+
+  
+  
+  
