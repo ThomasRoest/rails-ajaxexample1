@@ -5,6 +5,7 @@
 	<li><%= f.text_field :title %></li>
 	<li><%= label :content, :content %></li>
 	<li><%= f.text_field :content %></li>
+	<li><%= f.select(:category, options_for_select(select_options)) %></li>
 	<li><%= f.button :submit %></li>
 	<% end %>
 </ul>
